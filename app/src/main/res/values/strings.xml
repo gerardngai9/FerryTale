@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">FerryTale</string>
+
+    <string name="tab_text_1">COMPLETED</string>
+    <string name="tab_text_2">CANCELLED</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="journeyDate">Journey Date</string>
+    <string name="searchBtnText">SEARCH</string>
+    <string name="completed">Completed</string>
+    <string name="canceled">Canceled</string>
+    <string name="myBookingsTime">09:15A.M.</string>
+    <string name="myBookingDay">SUNDAY</string>
+    <string name="myBookingDate">16 MARCH</string>
+    <string name="statusText">CONFIRMED</string>
+    <string name="sourceText">LUMUT JETTY</string>
+    <string name="destText">PANGKOR JETTY</string>
+    <string name="cancelWarningText">You are about to cancel your ticket</string>
+    <string name="refundAmountText">Maximum Refundable Amount</string>
+    <string name="refundAmount">RM13.50</string>
+    <string name="fareBreakupText">Fare Breakup</string>
+    <string name="paidText">Paid</string>
+    <string name="refundableText">Refundable</string>
+    <string name="totalText">TOTAL</string>
+    <string name="totalPaidAmount">RM13.50</string>
+    <string name="totalRefundableAmount">RM13.50</string>
+    <string name="fareText">FARE</string>
+    <string name="farePaidAmount">RM13.50</string>
+    <string name="fareRefundableAmount">RM13.50</string>
+    <string name="viewCancellationPolicyText">View Cancellation Policy</string>
+    <string name="proceedBtnText">PROCEED</string>
+    <string name="homeText">Home</string>
+    <string name="myBookingsText">My Bookings</string>
+    <string name="helpText">Help</string>
+    <string name="myBookingTitle">My Bookings</string>
+
+    <!-- Ticket Details -->
+    <!-- detail1CardView -->
+    <string name="status">CONFIRMED</string>
+    <string name="ticketDate">16-03-2020</string>
+
+    <!-- detail2CardView -->
+    <string name="FROM">FROM</string>
+    <string name="TO">TO</string>
+    <string name="source">LUMUT JETTY</string>
+    <string name="dest">P.PANGKOR JETTY</string>
+
+    <!-- detail3CardView -->
+    <string name="PASSENGERS">PASSENGERS</string>
+    <string name="AGE">AGE</string>
+    <string name="passengerName">Geralt</string>
+    <string name="passengerAge">33</string>
+    <string name="ageCat">(ADULT)</string>
+
+    <!-- detail4CardView -->
+    <string name="TICKETNUMBER">TICKET NUMBER</string>
+    <string name="TOTAL">TOTAL</string>
+    <string name="ticketNo">KSM70911567</string>
+    <string name="totalAmount">RM11.50</string>
+
+    <!-- cancelTicketBtn -->
+    <string name="cancelTicketBtnText">CANCEL TICKET</string>
+
+    <!-- schedule -->
+    <!-- title bar -->
+    <string name="sourceLoc">Lumut Jetty</string>
+    <string name="destLoc">P.Pangkor Jetty</string>
+    <string name="date">16 MAR</string>
+
+    <!-- total search entries found -->
+    <string name="totalEntries">1</string>
+    <string name="ferrysFound">"FERRY(S) FOUND</string>
+
+    <!-- search result card view -->
+    <string name="opImage"></string>
+    <string name="dpTime">09:15 AM</string>
+    <string name="hrDuration">0</string>
+    <string name="h">"h"</string>
+    <string name="minDuration">33</string>
+    <string name="min">"min"</string>
+    <string name="seatQty">100</string>
+    <string name="seatText">seats</string>
+    <string name="adLogo"></string>
+    <string name="chLogo"></string>
+    <string name="RM">"RM"</string>
+    <string name="adPrice">7.00</string>
+    <string name="chPrice">2.50</string>
+
+    <!-- booking -->
+    <!-- contact card view -->
+    <string name="contactInfoText">"CONTACT INFORMATION"</string>
+    <string name="primaryPassengerText">"Primary Passenger"</string>
+    <string name="emailIDText">EMAIL ID</string>
+    <string name="mobileNoText">MOBILE NUMBER</string>
+
+    <!-- passenger card view -->
+    <string name="passengerInfoText">"PASSENGER INFORMATION"</string>
+    <string name="nameText">NAME</string>
+    <string name="ageText">AGE</string>
+    <string name="coPassengerText">Co-Passenger</string>
+
+    <!-- booking button -->
+    <string name="bookingBtnText">BOOKING</string>
+
+    <!-- terms & conditions -->
+    <string name="termsSentence">"By clicking booking you agree to our "</string>
+    <string name="terms">"Terms and Conditions"</string>
+    <string name="and">"and"</string>
+    <string name="policy">"Private Policy"</string>
+
+</resources>

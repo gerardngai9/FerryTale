@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.myapplication.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_schedule"
+            app:destination="@id/navigation_schedule" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_schedule"
+        android:name="com.example.myapplication.ScheduleFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_navigation_schedule_to_navigation_booking"
+            app:destination="@id/navigation_booking" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_booking"
+        android:name="com.example.myapplication.BookingFragment"
+        android:label="Booking"
+        tools:layout="@layout/fragment_booking" />
+
+    <fragment
+        android:id="@+id/navigation_myBookings"
+        android:name="com.example.myapplication.MyBookingsFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_my_bookings" >
+        <action
+            android:id="@+id/action_navigation_myBookings_to_navigation_ticketDetails"
+            app:destination="@id/navigation_ticketDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_ticketDetails"
+        android:name="com.example.myapplication.TicketDetailsFragment"
+        android:label="Ticket Details"
+        tools:layout="@layout/fragment_ticket_details" />
+
+    <fragment
+        android:id="@+id/navigation_completed"
+        android:name="com.example.myapplication.CompletedFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_completed" />
+
+    <fragment
+        android:id="@+id/navigation_canceled"
+        android:name="com.example.myapplication.CanceledFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_canceled" />
+
+    <fragment
+        android:id="@+id/navigation_cancel"
+        android:name="com.example.myapplication.CanceledFragment"
+        android:label="My Bookings"
+        tools:layout="@layout/fragment_cancel" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.myapplication.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" />
+</navigation>
