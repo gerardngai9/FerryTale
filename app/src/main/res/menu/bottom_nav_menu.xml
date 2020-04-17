@@ -12,8 +12,8 @@
         android:title="My Bookings" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_member_account"
         android:icon="@drawable/ic_avatar"
-        android:title="Profile" />
+        android:title="Member Account" />
 
 </menu>

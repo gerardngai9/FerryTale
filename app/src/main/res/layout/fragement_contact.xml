@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.ContactFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactus"
+            style="@style/DescFont"
+            tools:layout_editor_absoluteX="167dp"
+            tools:layout_editor_absoluteY="59dp" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/supportteam1"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="95dp" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/DescFont"
+            android:layout_width="149dp"
+            android:layout_height="125dp"
+            android:text="@string/contactusdesc"
+            tools:layout_editor_absoluteX="232dp"
+            tools:layout_editor_absoluteY="105dp" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/location"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="312dp" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/operationhour"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="407dp" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/customerservice"
+            tools:layout_editor_absoluteX="61dp"
+            tools:layout_editor_absoluteY="496dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

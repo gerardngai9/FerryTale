@@ -111,4 +111,103 @@
     <string name="and">"and"</string>
     <string name="policy">"Private Policy"</string>
 
+    <!-- My Account -->
+    <!-- myAccountCardView -->
+    <string name="mobileNo">"014-3006808"</string>
+    <string name="gmail">"gerardngai9@gmail.com"</string>
+
+    <!-- option -->
+    <!-- myBookingsCardView -->
+    <string name="myBookingsText2">"My Bookings"</string>
+
+    <!-- copassengerCardView -->
+    <string name="copassengerText">"Co-Passengers"</string>
+
+    <!-- helpCardView -->
+    <string name="helpText2">"Help"</string>
+
+    <!-- contactCardView -->
+    <string name="contactText">"Contact Us</string>
+
+    <!-- settingsCardView -->
+    <string name="settingsText">"Settings</string>
+
+    <!-- logoutCardView -->
+    <string name="logoutText">"Logout</string>
+
+    <string name="PopularFerryCompanies">Popular Ferry Companies</string>
+    <string name="FerryTaleIcon">FerryTaleIcon</string>
+    <string name="FerryTaleDescription1">1</string>
+    <string name="FerryTaleDescription2">2</string>
+    <string name="FerryTaleDescription3">3</string>
+    <string name="FerryTaleDescription4">4</string>
+    <string name="DesButtonClick1">DesButtonClick1</string>
+    <string name="DefaultDesc"> ~Welcome For Using FerryTale !~</string>
+    <string name="JoinButton">Join Now</string>
+    <string name="LoginButton">Login</string>
+    <string name="Preference">Preference</string>
+    <string name="Language">Language</string>
+    <string name="Profile">Profile</string>
+    <string name="EditName">Name</string>
+    <string name="EditBirthdayBtn">Edit</string>
+    <string name="EditBirthdOfDate">Birth Of Day</string>
+    <string name="PersonalDetail">PersonalDetail</string>
+    <string name="EditIcon">EditIcon</string>
+    <string name="EditNameBtn">Edit</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="tag">Let\'s join us and \nBuild your relationship with others</string>
+    <string name="register">Register</string>
+    <string name="re_type_password">Re-type Password</string>
+    <string name="your_name">( Full Name )</string>
+    <string name="ApplicationName">FerryTale</string>
+    <string name="LoginbtnL">Login</string>
+    <string name="RegisterBtnL">Register Now</string>
+    <string name="RegisterAccount">Register Account</string>
+    <string name="Birthday">( Birth of date )</string>
+    <string name="phoneNum">( No Phone Number )</string>
+    <string name="Password">( Password )</string>
+    <string name="PasswordConfirmed">( Retype Password )</string>
+    <string name="Email">( Email : abc123@example.com )</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="Cancel">Cancel</string>
+    <string name="CreditCardNum">Credit Card Num</string>
+    <string name="payment">Payment</string>
+    <string name="totalpayamount">Total Pay Amount :</string>
+    <string name="EditPhone">Phone</string>
+    <string name="EditEmail">Email</string>
+    <string name="EditPassword">Password</string>
+    <string name="EditPhoneBtn">Edit</string>
+    <string name="EditEmailBtn">Edit</string>
+    <string name="EditPasswordBtn">Edit</string>
+    <string name="SubmitEditBtn">Submit</string>
+    <string name="BackEditBtn">Back</string>
+    <string name="PayAmountValue">PayAmountValue</string>
+    <string name="CVV">CVV</string>
+    <string name="validDate">validDate</string>
+    <string name="Purchase">Purchase</string>
+    <string name="CancelPurchase">Cancel</string>
+    <string name="MyAccount">MyAccount</string>
+    <string name="MemberEmail">MemberEmail</string>
+    <string name="MyBooking">MyBooking</string>
+    <string name="Cards">Cards</string>
+    <string name="coopassengers">coopassengers</string>
+    <string name="offer">offer</string>
+    <string name="help">help</string>
+    <string name="CallSupport">CallSupport</string>
+    <string name="ContactUs">Contact Us</string>
+    <string name="preference">preference</string>
+    <string name="Logout">Logout</string>
+    <string name="contactus">contactus</string>
+    <string name="contactusdesc">the support team is always here for help</string>
+
 </resources>

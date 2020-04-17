@@ -70,4 +70,47 @@
         android:name="com.example.myapplication.NotificationsFragment"
         android:label="Notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.example.myapplication.RegisterFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.myapplication.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_member_account"
+        android:name="com.example.myapplication.MemberAccountFragment"
+        android:label="Member Account"
+        tools:layout="@layout/fragment_member_account" >
+        <action
+            android:id="@+id/action_navigation_member_account_to_navigation_myBookings"
+            app:destination="@id/navigation_myBookings" />
+        <action
+            android:id="@+id/action_navigation_member_account_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_intro"
+        android:name="com.example.myapplication.IntroFragment"
+        android:label="Intro"
+        tools:layout="@layout/fragment_payment" />
+
+    <fragment
+        android:id="@+id/navigation_preference"
+        android:name="com.example.myapplication.PreferenceFragment"
+        android:label="Preference"
+        tools:layout="@layout/fragment_preference" />
 </navigation>
