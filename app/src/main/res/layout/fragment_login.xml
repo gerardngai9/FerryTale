@@ -11,6 +11,17 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_colour">
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="200dp"
@@ -69,9 +80,10 @@
             app:layout_constraintTop_toBottomOf="@+id/username" />
 
         <Button
-            android:id="@+id/LoginBtn"
+            android:id="@+id/loginBtn"
+            style="@style/PrimaryBtn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
@@ -84,19 +96,18 @@
             app:layout_constraintTop_toBottomOf="@+id/password" />
 
         <Button
-            android:id="@+id/button6"
-            style="@android:style/Widget.DeviceDefault.Light.Button.Borderless.Small"
-            android:layout_width="139dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/registerBtn"
+            style="@style/SecondaryText"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:text="@string/RegisterBtnL"
             android:textStyle="bold"
             android:typeface="serif"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/LoginBtn" />
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
         <ImageView
             android:id="@+id/imageView5"
@@ -123,9 +134,12 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintStart_toEndOf="@+id/registerBtn"
             app:layout_constraintTop_toBottomOf="@+id/LoginBtn"
             app:srcCompat="@drawable/register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

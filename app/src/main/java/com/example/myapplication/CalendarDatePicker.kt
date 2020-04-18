@@ -19,7 +19,7 @@ class CalendarDatePicker : AppCompatActivity() {
             setContentView(R.layout.fragment_profile)
 
             val EditBirthdayBtn = findViewById<Button>(R.id.editBirthdaybtn)
-            val EditBirthday     = findViewById<TextView>(R.id.editBirhtday)
+            val EditBirthday     = findViewById<TextView>(R.id.editBirthDate)
 
             val c = Calendar.getInstance()
             val year = c.get(Calendar.YEAR)

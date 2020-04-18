@@ -30,6 +30,12 @@ class MemberAccountFragment : Fragment() {
         binding.root.myAccountCardView.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_profile)
         }
+        binding.root.settingsCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_preference)
+        }
+        binding.root.logoutCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_home)
+        }
         return binding.root
     }
 }

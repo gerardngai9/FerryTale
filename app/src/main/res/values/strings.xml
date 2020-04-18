@@ -149,11 +149,15 @@
     <string name="Language">Language</string>
     <string name="Profile">Profile</string>
     <string name="EditName">Name</string>
-    <string name="EditBirthdayBtn">Edit</string>
-    <string name="EditBirthdOfDate">Birth Of Day</string>
-    <string name="PersonalDetail">PersonalDetail</string>
+
+
+    <!-- Profile -->
+    <!-- personalDetailsCardView -->
+    <string name="PersonalDetailsText">PERSONAL DETAILS</string>
     <string name="EditIcon">EditIcon</string>
     <string name="EditNameBtn">Edit</string>
+    <string name="EditBirthDateBtn">Edit</string>
+    <string name="EditBirthDate">Birth Of Day</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -189,7 +193,7 @@
     <string name="EditPhoneBtn">Edit</string>
     <string name="EditEmailBtn">Edit</string>
     <string name="EditPasswordBtn">Edit</string>
-    <string name="SubmitEditBtn">Submit</string>
+    <string name="SubmitBtn">Submit</string>
     <string name="BackEditBtn">Back</string>
     <string name="PayAmountValue">PayAmountValue</string>
     <string name="CVV">CVV</string>
