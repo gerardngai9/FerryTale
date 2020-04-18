@@ -40,7 +40,7 @@ class RegisterFragment : Fragment(){
             spinner.adapter = adapter
         }
 
-        roleSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        /*roleSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
@@ -49,7 +49,7 @@ class RegisterFragment : Fragment(){
 
             }
 
-        }
+        }*/
         return binding.root
     }
 }
