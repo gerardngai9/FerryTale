@@ -29,7 +29,11 @@
         android:id="@+id/navigation_booking"
         android:name="com.example.myapplication.BookingFragment"
         android:label="Booking"
-        tools:layout="@layout/fragment_booking" />
+        tools:layout="@layout/fragment_booking" >
+        <action
+            android:id="@+id/action_navigation_booking_to_navigation_payment"
+            app:destination="@id/navigation_payment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_myBookings"
