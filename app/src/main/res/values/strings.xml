@@ -214,4 +214,9 @@
     <string name="contactus">contactus</string>
     <string name="contactusdesc">the support team is always here for help</string>
 
+        <string-array name="role_array">
+            <item>Member</item>
+            <item>Staff</item>
+        </string-array>
+
 </resources>
