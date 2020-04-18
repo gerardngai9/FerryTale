@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.myapplication.databinding.FragmentMemberAccountBinding
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_member_account.view.*
 
 /**
@@ -34,7 +35,8 @@ class MemberAccountFragment : Fragment() {
             view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_preference)
         }
         binding.root.logoutCardView.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_home)
+            FirebaseAuth.getInstance().signOut()
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_login)
         }
         return binding.root
     }

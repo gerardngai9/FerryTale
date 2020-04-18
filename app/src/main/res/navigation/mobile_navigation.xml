@@ -90,7 +90,11 @@
         android:id="@+id/navigation_register"
         android:name="com.example.myapplication.RegisterFragment"
         android:label="Register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -117,8 +121,8 @@
             android:id="@+id/action_navigation_member_account_to_navigation_preference"
             app:destination="@id/navigation_preference" />
         <action
-            android:id="@+id/action_navigation_member_account_to_navigation_home"
-            app:destination="@id/navigation_home" />
+            android:id="@+id/action_navigation_member_account_to_navigation_login"
+            app:destination="@id/navigation_login" />
     </fragment>
 
     <fragment
