@@ -65,7 +65,7 @@
 
     <fragment
         android:id="@+id/navigation_cancel"
-        android:name="com.example.myapplication.CanceledFragment"
+        android:name="com.example.myapplication.CancelFragment"
         android:label="My Bookings"
         tools:layout="@layout/fragment_cancel" />
 
