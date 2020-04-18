@@ -11,21 +11,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/background_colour">
 
-        <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
-            android:id="@+id/CreditCardNum"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="34dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/CreditCardNum"
-            app:disabledCards="visa|amex"
-            app:drawableGravity="end"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PayAmount"
-            app:separator="spaces" />
-
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="150dp"
@@ -91,28 +76,31 @@
 
         <EditText
             android:id="@+id/CVV"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:hint="@string/CVV"
             android:inputType="number"
-            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CreditCardNum" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
         <EditText
             android:id="@+id/ValidDate"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:ems="10"
             android:hint="@string/validDate"
             android:inputType="number"
             android:maxLength="5"
-            app:layout_constraintEnd_toStartOf="@+id/imageView16"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/CVV" />
@@ -153,10 +141,9 @@
             android:id="@+id/imageView16"
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="40dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/CreditCardNum"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PayAmount"
             app:srcCompat="@drawable/creditcard" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

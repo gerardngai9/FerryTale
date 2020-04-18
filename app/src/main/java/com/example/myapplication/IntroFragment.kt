@@ -20,7 +20,7 @@ class IntroFragment : Fragment() {
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentIntroBinding>(
             inflater,
-            R.layout.fragment_Intro, container, false
+            R.layout.fragment_intro, container, false
         )
 
         fun DesButtonClick1(v: View?) {
