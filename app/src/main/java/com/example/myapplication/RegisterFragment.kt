@@ -1,15 +1,12 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication.databinding.FragmentRegisterBinding
 import android.util.Patterns
@@ -125,17 +122,22 @@ class RegisterFragment : Fragment(){
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+                    val uid = user!!.uid
                     user?.sendEmailVerification()
                         ?.addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                val ref = FirebaseDatabase.getInstance().getReference("Customers")
 
-                                val customerID = ref.push().key
-                                val customer = Customer(customerID.toString(), name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
-                                ref.child(customerID.toString()).setValue(customer).addOnCompleteListener{
-                                    Toast.makeText(activity, "Customer save successfully", Toast.LENGTH_LONG).show()
 
-                                }
+                                    val ref = FirebaseDatabase.getInstance().getReference("Users")
+
+                                    val user1 = User( name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
+                                    ref.child(uid).setValue(user1).addOnCompleteListener{
+                                        Toast.makeText(activity, "Register save successfully", Toast.LENGTH_LONG).show()
+
+                                    }
+
+
+
 
                                 view?.findNavController()?.navigate(R.id.action_navigation_register_to_navigation_login)
 //                                val intent = Intent(activity, LoginFragment::class.java)

@@ -1,7 +1,6 @@
 package com.example.myapplication
 
-class Customer (
-    val userID: String,
+class User (
     val fullName: String,
     val phone: String,
     val BirthDay: String,
@@ -9,5 +8,5 @@ class Customer (
     val userRole: String
 )
 {
-    constructor(): this( "","","", "", "","" )
+    constructor(): this("","","", "", "" )
 }
