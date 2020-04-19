@@ -24,7 +24,6 @@ import com.google.firebase.database.*
 class LoginFragment : Fragment() {
     var auth =  FirebaseAuth.getInstance()
     private lateinit var ref: DatabaseReference
-    private lateinit var ref1: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
