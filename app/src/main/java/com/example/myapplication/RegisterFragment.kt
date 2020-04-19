@@ -1,15 +1,12 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.example.myapplication.databinding.FragmentRegisterBinding
 import android.util.Patterns
@@ -125,29 +122,20 @@ class RegisterFragment : Fragment(){
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+                    val uid = user!!.uid
                     user?.sendEmailVerification()
                         ?.addOnCompleteListener { task ->
                             if (task.isSuccessful) {
 
-                                if(roleSpinner.selectedItem.toString() == "Staff"){
-                                    val ref1 = FirebaseDatabase.getInstance().getReference("Staffs")
 
-                                    val staffID = ref1.push().key
-                                    val staff = Staff(staffID.toString(), name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
-                                    ref1.child(staffID.toString()).setValue(staff).addOnCompleteListener{
-                                        Toast.makeText(activity, "Staff save successfully", Toast.LENGTH_LONG).show()
+                                    val ref = FirebaseDatabase.getInstance().getReference("Users")
 
-                                    }
-                                }else{
-                                    val ref = FirebaseDatabase.getInstance().getReference("Customers")
-
-                                    val customerID = ref.push().key
-                                    val customer = Customer(customerID.toString(), name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
-                                    ref.child(customerID.toString()).setValue(customer).addOnCompleteListener{
-                                        Toast.makeText(activity, "Customer save successfully", Toast.LENGTH_LONG).show()
+                                    val user1 = User( name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
+                                    ref.child(uid).setValue(user1).addOnCompleteListener{
+                                        Toast.makeText(activity, "Register save successfully", Toast.LENGTH_LONG).show()
 
                                     }
-                                }
+
 
 
 

@@ -1,29 +1,30 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.myapplication.databinding.FragmentLoginBinding
+import com.google.android.gms.auth.api.Auth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.view.*
-import com.google.firebase.auth.AuthResult
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.firebase.database.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class LoginFragment : Fragment() {
-    private lateinit var auth: FirebaseAuth
+    var auth =  FirebaseAuth.getInstance()
+    private lateinit var ref: DatabaseReference
+    private lateinit var ref1: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,6 +41,10 @@ class LoginFragment : Fragment() {
         binding.root.registerBtn.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_login_to_navigation_register)
         }
+        // Initialize Database
+        ref = FirebaseDatabase.getInstance().getReference( "Users")
+
+
         return binding.root
     }
     private fun doLogin(){
@@ -60,9 +65,9 @@ class LoginFragment : Fragment() {
             return
         }
         auth.signInWithEmailAndPassword(username.text.toString(), password.text.toString()).addOnCompleteListener{
-            task ->
-            if(task.isSuccessful){
+            task -> if(task.isSuccessful){
             val user = auth.currentUser
+
             updateUI(user)
         }else{
             updateUI(null)
@@ -71,19 +76,50 @@ class LoginFragment : Fragment() {
 
 
     }
+
     public override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
     }
-    private fun updateUI(currentUser: FirebaseUser?) {
 
-        if (currentUser != null) {
-            if(currentUser.isEmailVerified) {
-                view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
-//                val intent = Intent(nav_host_fragment, HomeFragment::class.java)
-//                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                startActivity(intent)
+    private fun updateUI(currentuser: FirebaseUser?) {
+
+
+
+        if (currentuser != null) {
+            val uid = currentuser!!.uid
+            Log.i("checking", "uid: $uid")
+            if(currentuser.isEmailVerified) {
+
+                ref.child(uid).addListenerForSingleValueEvent(object :ValueEventListener{
+
+                    override fun onCancelled(p0: DatabaseError) {
+                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    }
+
+                    override fun onDataChange(p0: DataSnapshot) {
+                        Log.i("checking", "uid: $uid")
+
+                        val userRole1= p0.getValue(User::class.java)!!.userRole
+
+                       Log.i("checking", "Role: $userRole1")
+                       if(userRole1.equals("Member")){
+                           view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
+                            Toast.makeText(activity, "Login Successful. Welcome", Toast.LENGTH_SHORT).show()
+                        }
+                      else{
+                           view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
+                           Toast.makeText(activity, "Login Successful. Welcome Staff", Toast.LENGTH_SHORT).show()
+                        }
+                  }
+                })
+
+
+                //Test
+
+
+
 
             }else{
                 Toast.makeText(
