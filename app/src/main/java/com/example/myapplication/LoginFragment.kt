@@ -60,7 +60,8 @@ class LoginFragment : Fragment() {
             return
         }
         auth.signInWithEmailAndPassword(username.text.toString(), password.text.toString()).addOnCompleteListener{
-            task -> if(task.isSuccessful){
+            task ->
+            if(task.isSuccessful){
             val user = auth.currentUser
             updateUI(user)
         }else{
