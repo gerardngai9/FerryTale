@@ -32,6 +32,9 @@ class EditNameFragment:Fragment() {
         binding.root.ConfirmEditNameBtn.setOnClickListener {view: View ->
             updatedName()
         }
+        binding.root.button6.setOnClickListener {view: View ->
+            view?.findNavController()?.navigate(R.id.action_navigation_editUserName_to_navigation_profile)
+        }
 
         return binding.root
     }
@@ -53,7 +56,7 @@ class EditNameFragment:Fragment() {
                     Log.i("checking", "uid: $uid")
                     val phone = p0.getValue(User::class.java)!!.phone
                     val username = p0.getValue(User::class.java)!!.username
-                    val birthday = p0.getValue(User::class.java)!!.BirthDay
+                    val birthday = p0.getValue(User::class.java)!!.birthDay
                     val role = p0.getValue(User::class.java)!!.userRole
 
                     val user1 = User(editName.text.toString().trim(), phone, birthday, username, role)

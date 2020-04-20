@@ -42,10 +42,11 @@ class ProfileFragment : Fragment() {
                 }
 
                 override fun onDataChange(p0: DataSnapshot) {
-                    Log.i("checking", "uid: $uid")
 
+                    val testing = p0.getValue(User::class.java)!!.birthDay
+                    Log.i("checking", "uid: $testing")
                     editName.setText(p0.getValue(User::class.java)!!.fullName)
-                    editBirthDate.setText(p0.getValue(User::class.java)!!.BirthDay)
+                    editBirthDate.setText(p0.getValue(User::class.java)!!.birthDay)
                     editPhone.setText(p0.getValue(User::class.java)!!.phone)
                     editEmail.setText(p0.getValue(User::class.java)!!.username)
                 }
