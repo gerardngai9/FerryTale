@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.myapplication.InsertScheduleFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/scrollConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/totalEntries"
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/totalEntries"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/primary_font_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ferrysFound"
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/ferrysFound"
+                    android:textColor="@color/secondaryTextColor"
+                    android:textSize="@dimen/primary_font_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/totalEntries"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/scheduleCardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ferrysFound">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cardViewConstraint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/rm2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="32dp"
+                            android:text="@string/RM"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/primary_font_size"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/editText5" />
+
+                        <TextView
+                            android:id="@+id/rm1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="@string/RM"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textSize="@dimen/primary_font_size"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@+id/rm2"
+                            app:layout_constraintEnd_toStartOf="@+id/editText4" />
+
+                        <TextView
+                            android:id="@+id/seatText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/seatText"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/seatQty"
+                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
+
+                        <TextView
+                            android:id="@+id/seatQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/seatQty"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
+
+                        <TextView
+                            android:id="@+id/min"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/min"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/minDuration"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
+
+                        <TextView
+                            android:id="@+id/minDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/minDuration"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/h"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
+
+                        <TextView
+                            android:id="@+id/h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/h"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toEndOf="@+id/hrDuration"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
+
+                        <TextView
+                            android:id="@+id/hrDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/hrDuration"
+                            android:textColor="#555555"
+                            android:textSize="12sp"
+                            android:textStyle="normal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
+
+                        <TextView
+                            android:id="@+id/toText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/to"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toEndOf="@+id/editText2"
+                            app:layout_constraintTop_toBottomOf="@+id/seatText" />
+
+                        <ImageView
+                            android:id="@+id/adLogo"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            app:layout_constraintBottom_toTopOf="@+id/chLogo"
+                            app:layout_constraintEnd_toStartOf="@+id/rm1"
+                            app:srcCompat="@drawable/ic_adult" />
+
+                        <ImageView
+                            android:id="@+id/chLogo"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="32dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/rm2"
+                            app:srcCompat="@drawable/ic_child" />
+
+                        <ImageView
+                            android:id="@+id/opImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/calendar" />
+
+                        <EditText
+                            android:id="@+id/contactInfoEditText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="5dp"
+                            android:ems="10"
+                            android:hint="@string/ScheduleTimeHint"
+                            android:inputType="textPersonName"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/opImage" />
+
+                        <EditText
+                            android:id="@+id/editText2"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="11dp"
+                            android:ems="10"
+                            android:hint="@string/OriginLocationHint"
+                            android:inputType="textPersonName"
+                            app:layout_constraintEnd_toStartOf="@+id/toText"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/seatQty" />
+
+                        <EditText
+                            android:id="@+id/editText3"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:ems="10"
+                            android:hint="@string/DestinationHint"
+                            android:inputType="textPersonName"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+                        <EditText
+                            android:id="@+id/editText4"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:ems="10"
+                            android:hint="@string/AdultPriceHint"
+                            android:inputType="number"
+                            app:layout_constraintBottom_toTopOf="@+id/editText5"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <EditText
+                            android:id="@+id/editText5"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="16dp"
+                            android:ems="10"
+                            android:hint="@string/ChildrenPriceHint"
+                            android:inputType="number"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/ConfirminsertScheduleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/holo_red_light"
+                    android:text="@string/ConfirminsertScheduleBtn"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ferrysFound"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/CancelinsertScheduleBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/holo_red_light"
+                    android:text="@string/CancelinsertScheduleBtn"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ferrysFound"
+                    app:layout_constraintTop_toBottomOf="@+id/ConfirminsertScheduleBtn" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
