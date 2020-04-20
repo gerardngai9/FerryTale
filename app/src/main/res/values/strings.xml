@@ -213,10 +213,24 @@
     <string name="Logout">Logout</string>
     <string name="contactus">contactus</string>
     <string name="contactusdesc">the support team is always here for help</string>
+    <string name="editdesc1">Please Modify To Your New Name </string>
+    <string name="editdesc2">Please Modify To Your New Password</string>
+    <string name="editdesc3">Retype New Password For Confirmation</string>
+    <string name="editdesc4">Please Modify To Your New Phone Number</string>
+    <string name="ConfirmEditNameBtn">Confirm</string>
+    <string name="ConfirmEditPhoneNoBtn">Confirm</string>
+    <string name="ConfirmEditPasswordBtn">Confirm</string>
+    <string name="CancelEditNameBtn">Cancel</string>
+    <string name="CancelEditPhoneNoBtn">Cancel</string>
+    <string name="CancelEditPasswordBtn">Cancel</string>
+    <string name="editHint1">Enter your new name here</string>
+    <string name="editHint2">Enter your new password here</string>
+    <string name="editHint3">Re-enter your new password here</string>
+    <string name="editHint4">Enter your new phone number here</string>
 
-        <string-array name="role_array">
-            <item>Member</item>
-            <item>Staff</item>
-        </string-array>
+    <string-array name="role_array">
+        <item>Member</item>
+        <item>Staff</item>
+    </string-array>
 
 </resources>
