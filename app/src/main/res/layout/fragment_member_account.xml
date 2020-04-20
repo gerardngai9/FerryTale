@@ -40,7 +40,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/myAccountCardViewConstraint"
+                android:id="@+id/StaffAccountCardViewConstraint"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -78,7 +78,7 @@
                     app:srcCompat="@drawable/ic_send" />
 
                 <TextView
-                    android:id="@+id/mobileNo"
+                    android:id="@+id/StaffMobileNo"
                     style="@style/SecondaryText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

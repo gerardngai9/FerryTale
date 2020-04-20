@@ -135,6 +135,26 @@
     <!-- logoutCardView -->
     <string name="logoutText">"Logout</string>
 
+
+    <!-- Staff Account -->
+    <!-- myAccountCardView -->
+    <string name="StaffmobileNo">"012-7673137"</string>
+    <string name="Staffgmail">"mrfoo19990831@gmail.com"</string>
+
+    <!-- option -->
+    <!-- myBookingsCardView -->
+    <string name="CustomerBookingsText2">"All User Bookings"</string>
+
+    <!-- copassengerCardView -->
+    <string name="editScheduleText">"Edit or Modify Schedule"</string>
+
+    <!-- helpCardView -->
+    <string name="ViewUserText">"View User"</string>
+
+
+    <!-- logoutCardView -->
+    <string name="StafflogoutText">"Logout</string>
+
     <string name="PopularFerryCompanies">Popular Ferry Companies</string>
     <string name="FerryTaleIcon">FerryTaleIcon</string>
     <string name="FerryTaleDescription1">1</string>
@@ -227,6 +247,14 @@
     <string name="editHint2">Enter your new password here</string>
     <string name="editHint3">Re-enter your new password here</string>
     <string name="editHint4">Enter your new phone number here</string>
+    <string name="insertScheduleBtn">Insert New Schedule</string>
+    <string name="ConfirminsertScheduleBtn">Confirm</string>
+    <string name="CancelinsertScheduleBtn">Cancel</string>
+    <string name="ScheduleTimeHint">Enter Schedule Time</string>
+    <string name="OriginLocationHint">Enter Origin</string>
+    <string name="DestinationHint">Enter Destination</string>
+    <string name="AdultPriceHint">0.00</string>
+    <string name="ChildrenPriceHint">0.00</string>
 
     <string-array name="role_array">
         <item>Member</item>
