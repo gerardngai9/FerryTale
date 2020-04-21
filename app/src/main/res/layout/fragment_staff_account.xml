@@ -80,7 +80,7 @@
                         <TextView
                             android:id="@+id/StaffMobileNo"
                             style="@style/SecondaryText"
-                            android:layout_width="67dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="32dp"
                             android:layout_marginStart="16dp"
                             android:layout_marginTop="16dp"

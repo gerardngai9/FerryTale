@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.myapplication.InsertScheduleFragment">
+    tools:context="com.example.myapplication.InsertScheduleFragment"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/schedule"
@@ -97,96 +98,16 @@
                             app:layout_constraintEnd_toStartOf="@+id/editText4" />
 
                         <TextView
-                            android:id="@+id/seatText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/seatText"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/seatQty"
-                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
-
-                        <TextView
-                            android:id="@+id/seatQty"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/seatQty"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
-
-                        <TextView
-                            android:id="@+id/min"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/min"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/minDuration"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
-
-                        <TextView
-                            android:id="@+id/minDuration"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/minDuration"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/h"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
-
-                        <TextView
-                            android:id="@+id/h"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/h"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/hrDuration"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
-
-                        <TextView
-                            android:id="@+id/hrDuration"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/hrDuration"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
-
-                        <TextView
                             android:id="@+id/toText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginTop="17dp"
+                            android:layout_marginTop="32dp"
                             android:text="@string/to"
                             android:textColor="@color/secondaryTextColor"
                             android:textStyle="bold"
-                            app:layout_constraintStart_toEndOf="@+id/editText2"
-                            app:layout_constraintTop_toBottomOf="@+id/seatText" />
+                            app:layout_constraintStart_toEndOf="@+id/insertorigin"
+                            app:layout_constraintTop_toBottomOf="@+id/insertScheduleDuration" />
 
                         <ImageView
                             android:id="@+id/adLogo"
@@ -233,11 +154,11 @@
                             app:layout_constraintTop_toBottomOf="@+id/opImage" />
 
                         <EditText
-                            android:id="@+id/editText2"
+                            android:id="@+id/insertorigin"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="11dp"
-                            android:layout_marginTop="4dp"
+                            android:layout_marginTop="16dp"
                             android:layout_marginEnd="11dp"
                             android:ems="10"
                             android:hint="@string/OriginLocationHint"
@@ -245,10 +166,10 @@
                             app:layout_constraintEnd_toStartOf="@+id/toText"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/seatQty" />
+                            app:layout_constraintTop_toBottomOf="@+id/insertScheduleDuration" />
 
                         <EditText
-                            android:id="@+id/editText3"
+                            android:id="@+id/insertdestination"
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="11dp"
@@ -256,7 +177,7 @@
                             android:hint="@string/DestinationHint"
                             android:inputType="textPersonName"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+                            app:layout_constraintTop_toBottomOf="@+id/insertorigin" />
 
                         <EditText
                             android:id="@+id/editText4"
@@ -281,6 +202,18 @@
                             android:inputType="number"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
+
+                        <EditText
+                            android:id="@+id/insertScheduleDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="2dp"
+                            android:ems="10"
+                            android:hint="@string/insertscheduleDurationhint"
+                            android:inputType="textPersonName"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoEditText" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -231,8 +231,8 @@
     <string name="ContactUs">Contact Us</string>
     <string name="preference">preference</string>
     <string name="Logout">Logout</string>
-    <string name="contactus">contactus</string>
-    <string name="contactusdesc">the support team is always here for help</string>
+    <string name="contactus">Contact Us</string>
+    <string name="contactusdesc">The support team is always here for help.</string>
     <string name="editdesc1">Please Modify To Your New Name </string>
     <string name="editdesc2">Please Modify To Your New Password</string>
     <string name="editdesc3">Retype New Password For Confirmation</string>
@@ -255,7 +255,14 @@
     <string name="DestinationHint">Enter Destination</string>
     <string name="AdultPriceHint">0.00</string>
     <string name="ChildrenPriceHint">0.00</string>
-
+    <string name="cu1">Organization Location</string>
+    <string name="cu2">Jalan Prima Setapak 7, Taman Setapak, 53000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</string>
+    <string name="cu3">Operation Hours</string>
+    <string name="cu4">8:00a.m. to 8:00p.m.</string>
+    <string name="cu5">Customer Service</string>
+    <string name="cu6">012-7673137 (24/7)</string>
+    <string name="scheduleDuration">1 hour 30 minutes</string>
+    <string name="insertscheduleDurationhint">Enter hours and minutes </string>
     <string-array name="role_array">
         <item>Member</item>
         <item>Staff</item>

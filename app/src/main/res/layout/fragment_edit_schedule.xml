@@ -8,7 +8,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/schedule"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_colour3">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -143,101 +144,16 @@
                             app:layout_constraintEnd_toEndOf="parent" />
 
                         <TextView
-                            android:id="@+id/seatText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/seatText"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/seatQty"
-                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
-
-                        <TextView
-                            android:id="@+id/seatQty"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/seatQty"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
-
-                        <TextView
-                            android:id="@+id/min"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/min"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/minDuration"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoText" />
-
-                        <TextView
-                            android:id="@+id/minDuration"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/minDuration"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/h"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoText" />
-
-                        <TextView
-                            android:id="@+id/h"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/h"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toEndOf="@+id/hrDuration"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoText" />
-
-                        <TextView
-                            android:id="@+id/hrDuration"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="8dp"
-                            android:text="@string/hrDuration"
-                            android:textColor="#555555"
-                            android:textSize="12sp"
-                            android:textStyle="normal"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/contactInfoText" />
-
-                        <TextView
                             android:id="@+id/sourceText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="16dp"
                             android:text="@string/sourceText"
                             android:textColor="@color/secondaryTextColor"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/seatText" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                         <TextView
                             android:id="@+id/destText"
@@ -259,13 +175,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="8dp"
+                            android:layout_marginTop="16dp"
                             android:text="@string/to"
                             android:textColor="@color/secondaryTextColor"
                             android:textStyle="bold"
                             app:layout_constraintStart_toEndOf="@+id/sourceText"
-                            app:layout_constraintTop_toBottomOf="@+id/seatText" />
+                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
                         <ImageView
                             android:id="@+id/adLogo"
@@ -299,6 +214,18 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/calendar" />
+
+                        <TextView
+                            android:id="@+id/scheduleDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/scheduleDuration"
+                            android:textColor="@color/secondaryTextColor"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/contactInfoText" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
