@@ -120,7 +120,7 @@
                     app:srcCompat="@drawable/ic_send" />
 
                 <TextView
-                    android:id="@+id/myBookingsText"
+                    android:id="@+id/allUserBookingsText"
                     style="@style/SecondaryText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -331,7 +331,7 @@
                     app:srcCompat="@drawable/ic_send" />
 
                 <TextView
-                    android:id="@+id/logoutText"
+                    android:id="@+id/StafflogoutText"
                     style="@style/SecondaryText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
