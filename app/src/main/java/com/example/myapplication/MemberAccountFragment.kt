@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -58,7 +59,9 @@ class MemberAccountFragment : Fragment() {
         }
         binding.root.logoutCardView.setOnClickListener {view: View ->
             FirebaseAuth.getInstance().signOut()
-            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_login)
+            val intent = Intent(activity, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
         }
         updatedProfile()
 

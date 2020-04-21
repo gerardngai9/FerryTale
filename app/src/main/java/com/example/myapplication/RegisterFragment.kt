@@ -47,7 +47,10 @@ class RegisterFragment : Fragment(){
             signUpUser()
             //view.findNavController().navigate(R.id.action_navigation_login_to_navigation_home)
         }
+        binding.root.button7.setOnClickListener {
 
+            view?.findNavController()?.navigate(R.id.action_navigation_register_to_navigation_login)
+        }
 
         /*roleSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(parent: AdapterView<*>?) {

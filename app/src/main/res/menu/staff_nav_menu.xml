@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_staff_Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_StaffeditSchedule"
+        android:icon="@drawable/ic_booking"
+        android:title="My Bookings" />
+
+    <item
+        android:id="@+id/navigation_StaffAccount"
+        android:icon="@drawable/ic_avatar"
+        android:title="Staff Account" />
+</menu>

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.myapplication.databinding.FragmentStaffAccountBinding
+import com.example.myapplication.databinding.FragmentEditScheduleBinding
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_edit_schedule.view.*
 import kotlinx.android.synthetic.main.fragment_member_account.view.*
@@ -19,7 +19,7 @@ class EditScheduleFragment : Fragment(){
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<FragmentStaffAccountBinding>(
+        val binding = DataBindingUtil.inflate<FragmentEditScheduleBinding>(
             inflater,
             R.layout.fragment_edit_schedule, container, false
         )

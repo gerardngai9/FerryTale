@@ -22,11 +22,13 @@ import kotlinx.android.synthetic.main.fragment_profile.view.*
 class ProfileFragment : Fragment() {
 
     var auth =  FirebaseAuth.getInstance()
+
     private lateinit var ref: DatabaseReference
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var back: String = ""
         val binding = DataBindingUtil.inflate<FragmentProfileBinding>(
             inflater,
             R.layout.fragment_profile, container, false
@@ -49,6 +51,7 @@ class ProfileFragment : Fragment() {
                     editBirthDate.setText(p0.getValue(User::class.java)!!.birthDay)
                     editPhone.setText(p0.getValue(User::class.java)!!.phone)
                     editEmail.setText(p0.getValue(User::class.java)!!.username)
+                    back = p0.getValue(User::class.java)!!.userRole
                 }
             })
         }
@@ -62,10 +65,24 @@ class ProfileFragment : Fragment() {
             view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_editPhone)
         }
         binding.root.submitBtn.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_member_account)
+            if(back.equals("Member")){
+                view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_member_account)
+            }
+            else{
+                view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_StaffAccount)
+            }
         }
         binding.root.backBtn.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_member_account)
+            if(back.equals("Member")){
+                view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_member_account)
+            }
+            else{
+                view.findNavController().navigate(R.id.action_navigation_profile_to_navigation_StaffAccount)
+            }
+
+
+
+
         }
         return binding.root
     }

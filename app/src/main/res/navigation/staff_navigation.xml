@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/staff_navigation"
+    app:startDestination="@+id/navigation_staff_Home">
+
+
+
+
+    <fragment
+        android:id="@+id/navigation_StaffAccount"
+        android:name="com.example.myapplication.StaffAccountFragment"
+        android:label="Staff account"
+        tools:layout="@layout/fragment_staff_account" >
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_login"
+            app:destination="@id/navigation_login" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_StaffeditSchedule"
+            app:destination="@id/navigation_StaffeditSchedule" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_StaffviewAllUser"
+            app:destination="@id/navigation_StaffviewAllUser" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_staff_Home"
+            app:destination="@id/navigation_staff_Home" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffeditSchedule"
+        android:name="com.example.myapplication.EditScheduleFragment"
+        android:label="Edit or Modify the Schedule"
+        tools:layout="@layout/fragment_edit_schedule" >
+        <action
+            android:id="@+id/action_navigation_StaffeditSchedule_to_navigation_StaffInsertSchedule"
+            app:destination="@id/navigation_StaffInsertSchedule" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffviewAllUser"
+        android:name="com.example.myapplication.ViewUserFragment"
+        android:label="View all User"
+        tools:layout="@layout/fragment_view_user" >
+        <action
+            android:id="@+id/action_navigation_StaffviewAllUser_to_navigation_StaffAccount"
+            app:destination="@id/navigation_StaffAccount" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffInsertSchedule"
+        android:name="com.example.myapplication.InsertScheduleFragment"
+        android:label="Insert Schedule"
+        tools:layout="@layout/fragment_insert_schedule" >
+        <action
+            android:id="@+id/action_navigation_StaffInsertSchedule_to_navigation_StaffeditSchedule"
+            app:destination="@id/navigation_StaffeditSchedule" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_staff_Home"
+        android:name="com.example.myapplication.StaffHomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_staff_home" >
+
+        <action
+            android:id="@+id/action_navigation_staff_Home_to_navigation_StaffAccount"
+            app:destination="@id/navigation_StaffAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.myapplication.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_StaffAccount"
+            app:destination="@id/navigation_StaffAccount" />
+    </fragment>
+</navigation>

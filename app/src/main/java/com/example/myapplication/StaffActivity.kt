@@ -1,37 +1,35 @@
 package com.example.myapplication
 
-import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity() {
+class StaffActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        //Customer
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
+        setContentView(R.layout.activity_staff)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        //Staff
+        val navView1: BottomNavigationView = findViewById(R.id.nav_view1)
+
+        val navController = findNavController(R.id.nav_host_fragment1)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_home, R.id.navigation_myBookings, R.id.navigation_profile))
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        val appBarConfiguration1 = AppBarConfiguration(setOf(
+            R.id.navigation_staff_Home, R.id.navigation_StaffeditSchedule, R.id.navigation_StaffAccount))
+        setupActionBarWithNavController(navController, appBarConfiguration1)
+        navView1.setupWithNavController(navController)
 
         NavigationUI.setupActionBarWithNavController(this,navController)
-
-
     }
-
     override fun onSupportNavigateUp(): Boolean {
-        val navController = this.findNavController(R.id.nav_host_fragment)
+        val navController = this.findNavController(R.id.nav_host_fragment1)
         return navController.navigateUp()
     }
 }
