@@ -8,8 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/schedule"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/background_colour3">
+        android:layout_height="match_parent">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -153,7 +152,7 @@
                             android:textColor="@color/secondaryTextColor"
                             android:textStyle="bold"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                            app:layout_constraintTop_toBottomOf="@+id/scheduleDuration" />
 
                         <TextView
                             android:id="@+id/destText"
@@ -180,7 +179,7 @@
                             android:textColor="@color/secondaryTextColor"
                             android:textStyle="bold"
                             app:layout_constraintStart_toEndOf="@+id/sourceText"
-                            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+                            app:layout_constraintTop_toBottomOf="@+id/scheduleDuration" />
 
                         <ImageView
                             android:id="@+id/adLogo"
