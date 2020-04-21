@@ -5,7 +5,7 @@ class Schedule (
     val destination: String,
     val origin: String,
     val duration: String,
-    val PriceAdult: Double,
+    val priceAdult: Double,
     val priceChild: Double,
     val startTime: String
 )

@@ -29,6 +29,8 @@ class BookingFragment : Fragment() {
             inflater,
             R.layout.fragment_booking, container, false
         )
+var dataCVV : Long
+
         binding.root.bookingBtn.setOnClickListener {
                 bookingDetail()
 
