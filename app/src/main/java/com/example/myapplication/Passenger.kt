@@ -1,6 +1,6 @@
 package com.example.myapplication
 
-class Booking (
+class Passenger (
     val uid: String,
     val emailID: String,
     val phoneNum: String,

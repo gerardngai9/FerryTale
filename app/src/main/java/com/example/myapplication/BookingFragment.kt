@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.widget.ArrayAdapter
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
@@ -16,7 +14,6 @@ import com.google.firebase.database.FirebaseDatabase
 import com.example.myapplication.databinding.FragmentBookingBinding
 import kotlinx.android.synthetic.main.fragment_booking.*
 import kotlinx.android.synthetic.main.fragment_booking.view.*
-import kotlinx.android.synthetic.main.fragment_home.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -91,14 +88,14 @@ class BookingFragment : Fragment() {
         }
 
 
-        val ref = FirebaseDatabase.getInstance().getReference("Booking")
+        val ref = FirebaseDatabase.getInstance().getReference("Passenger")
 
 
         val bookingID =ref.push().getKey()
         val user = auth.currentUser
         val uid = user!!.uid
 
-        val user1 = Booking(uid.toString(),emailIDText4.text.toString(), mobileNoText.text.toString(), nameText1.text.toString(), ageText1.text.toString(), nameText2.text.toString(),ageText2.text.toString())
+        val user1 = Passenger(uid.toString(),emailIDText4.text.toString(), mobileNoText.text.toString(), nameText1.text.toString(), ageText1.text.toString(), nameText2.text.toString(),ageText2.text.toString())
         ref.child(bookingID.toString()).setValue(user1).addOnCompleteListener{
             Toast.makeText(activity, "Register save successfully", Toast.LENGTH_LONG).show()
 
