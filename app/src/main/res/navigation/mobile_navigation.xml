@@ -177,4 +177,46 @@
             android:id="@+id/action_navigation_editPhone_to_navigation_profile"
             app:destination="@id/navigation_profile" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffAccount"
+        android:name="com.example.myapplication.StaffAccountFragment"
+        android:label="Staff account"
+        tools:layout="@layout/fragment_staff_account" >
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_StaffviewAllUser"
+            app:destination="@id/navigation_StaffviewAllUser" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_StaffeditSchedule"
+            app:destination="@id/navigation_StaffeditSchedule" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffeditSchedule"
+        android:name="com.example.myapplication.EditScheduleFragment"
+        android:label="Edit or Modify the Schedule"
+        tools:layout="@layout/fragment_edit_schedule" >
+        <action
+            android:id="@+id/action_navigation_StaffeditSchedule_to_navigation_StaffInsertSchedule"
+            app:destination="@id/navigation_StaffInsertSchedule" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_StaffviewAllUser"
+        android:name="com.example.myapplication.ViewUserFragment"
+        android:label="View all User"
+        tools:layout="@layout/fragment_view_user" />
+
+    <fragment
+        android:id="@+id/navigation_StaffInsertSchedule"
+        android:name="com.example.myapplication.InsertScheduleFragment"
+        android:label="Insert Schedule"
+        tools:layout="@layout/fragment_insert_schedule" >
+        <action
+            android:id="@+id/action_navigation_StaffInsertSchedule_to_navigation_StaffeditSchedule"
+            app:destination="@id/navigation_StaffeditSchedule" />
+    </fragment>
 </navigation>
