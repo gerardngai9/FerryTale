@@ -44,7 +44,7 @@
         android:id="@+id/navigation_StaffviewAllUser"
         android:name="com.example.myapplication.ViewUserFragment"
         android:label="View all User"
-        tools:layout="@layout/fragment_view_user" >
+        tools:layout="@layout/fragment_all_user_card_view" >
         <action
             android:id="@+id/action_navigation_StaffviewAllUser_to_navigation_StaffAccount"
             app:destination="@id/navigation_StaffAccount" />
