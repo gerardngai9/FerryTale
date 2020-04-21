@@ -263,6 +263,14 @@
     <string name="cu6">012-7673137 (24/7)</string>
     <string name="scheduleDuration">1 hour 30 minutes</string>
     <string name="insertscheduleDurationhint">Enter hours and minutes </string>
+    <string name="staffdesc">Welcome ! You are login as a staff now. </string>
+    <string name="AllName1">Name: </string>
+    <string name="AllAge1">Age: </string>
+    <string name="AllEmail1">Email: </string>
+    <string name="AllPhoneno1">Phone No: </string>
+
+
+
     <string-array name="role_array">
         <item>Member</item>
         <item>Staff</item>
