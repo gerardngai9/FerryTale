@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
@@ -104,11 +105,18 @@ class LoginFragment : Fragment() {
 
                        Log.i("checking", "Role: $userRole1")
                        if(userRole1.equals("Member")){
-                           view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
+
+
+                           val intent = Intent(activity, UserActivity::class.java)
+                           intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                           startActivity(intent)
                             Toast.makeText(activity, "Login Successful. Welcome", Toast.LENGTH_SHORT).show()
                         }
                       else{
-                           view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
+                           val intent = Intent(activity, StaffActivity::class.java)
+                           intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                           startActivity(intent)
+                           //view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
                            Toast.makeText(activity, "Login Successful. Welcome Staff", Toast.LENGTH_SHORT).show()
                         }
                   }

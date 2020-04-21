@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -49,14 +50,19 @@ class StaffAccountFragment : Fragment() {
 
         }
         binding.root.StaffAccountCardView.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_navigation_StaffAccount_to_navigation_StaffeditSchedule)
+            view.findNavController().navigate(R.id.action_navigation_StaffAccount_to_navigation_profile)
         }
         binding.root.ModifyScheduleCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_StaffAccount_to_navigation_StaffeditSchedule)
+        }
+        binding.root.StaffViewUserCardView.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_StaffAccount_to_navigation_StaffviewAllUser)
         }
         binding.root.StaffsettingsCardView.setOnClickListener {view: View ->
             FirebaseAuth.getInstance().signOut()
-            view.findNavController().navigate(R.id.action_navigation_StaffAccount_to_navigation_login)
+            val intent = Intent(activity, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
         }
         return binding.root
     }
