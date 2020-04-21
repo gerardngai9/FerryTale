@@ -130,7 +130,7 @@ class RegisterFragment : Fragment(){
 
                                     val ref = FirebaseDatabase.getInstance().getReference("Users")
 
-                                    val user1 = User( name.text.toString(), birthday.text.toString(), phone.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
+                                    val user1 = User(name.text.toString(), phone.text.toString(), birthday.text.toString(), email.text.toString(), roleSpinner.selectedItem.toString())
                                     ref.child(uid).setValue(user1).addOnCompleteListener{
                                         Toast.makeText(activity, "Register save successfully", Toast.LENGTH_LONG).show()
 

@@ -135,6 +135,26 @@
     <!-- logoutCardView -->
     <string name="logoutText">"Logout</string>
 
+
+    <!-- Staff Account -->
+    <!-- myAccountCardView -->
+    <string name="StaffmobileNo">"012-7673137"</string>
+    <string name="Staffgmail">"mrfoo19990831@gmail.com"</string>
+
+    <!-- option -->
+    <!-- myBookingsCardView -->
+    <string name="CustomerBookingsText2">"All User Bookings"</string>
+
+    <!-- copassengerCardView -->
+    <string name="editScheduleText">"Edit or Modify Schedule"</string>
+
+    <!-- helpCardView -->
+    <string name="ViewUserText">"View User"</string>
+
+
+    <!-- logoutCardView -->
+    <string name="StafflogoutText">"Logout</string>
+
     <string name="PopularFerryCompanies">Popular Ferry Companies</string>
     <string name="FerryTaleIcon">FerryTaleIcon</string>
     <string name="FerryTaleDescription1">1</string>
@@ -213,10 +233,32 @@
     <string name="Logout">Logout</string>
     <string name="contactus">contactus</string>
     <string name="contactusdesc">the support team is always here for help</string>
+    <string name="editdesc1">Please Modify To Your New Name </string>
+    <string name="editdesc2">Please Modify To Your New Password</string>
+    <string name="editdesc3">Retype New Password For Confirmation</string>
+    <string name="editdesc4">Please Modify To Your New Phone Number</string>
+    <string name="ConfirmEditNameBtn">Confirm</string>
+    <string name="ConfirmEditPhoneNoBtn">Confirm</string>
+    <string name="ConfirmEditPasswordBtn">Confirm</string>
+    <string name="CancelEditNameBtn">Cancel</string>
+    <string name="CancelEditPhoneNoBtn">Cancel</string>
+    <string name="CancelEditPasswordBtn">Cancel</string>
+    <string name="editHint1">Enter your new name here</string>
+    <string name="editHint2">Enter your new password here</string>
+    <string name="editHint3">Re-enter your new password here</string>
+    <string name="editHint4">Enter your new phone number here</string>
+    <string name="insertScheduleBtn">Insert New Schedule</string>
+    <string name="ConfirminsertScheduleBtn">Confirm</string>
+    <string name="CancelinsertScheduleBtn">Cancel</string>
+    <string name="ScheduleTimeHint">Enter Schedule Time</string>
+    <string name="OriginLocationHint">Enter Origin</string>
+    <string name="DestinationHint">Enter Destination</string>
+    <string name="AdultPriceHint">0.00</string>
+    <string name="ChildrenPriceHint">0.00</string>
 
-        <string-array name="role_array">
-            <item>Member</item>
-            <item>Staff</item>
-        </string-array>
+    <string-array name="role_array">
+        <item>Member</item>
+        <item>Staff</item>
+    </string-array>
 
 </resources>

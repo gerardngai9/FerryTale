@@ -34,8 +34,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:clickable="true"
-            android:focusable="true"
+            android:focusable="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -65,7 +64,7 @@
                     android:layout_marginEnd="16dp"
                     android:ems="10"
                     android:inputType="phone"
-                    android:text="@string/EditEmail"
+                    android:focusable="false"
                     app:layout_constraintEnd_toStartOf="@+id/editEmailBtn"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -103,7 +102,7 @@
                     android:ems="10"
                     android:hint="@string/your_name"
                     android:inputType="textPersonName"
-                    android:text="@string/EditName"
+                    android:focusable="false"
                     app:layout_constraintEnd_toStartOf="@+id/editNameBtn"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/PersonalDetailsText" />
@@ -129,7 +128,8 @@
                     android:ems="10"
                     android:inputType="textPassword"
                     android:singleLine="true"
-                    android:text="@string/EditPassword"
+                    android:focusable="false"
+                    android:text="*********"
                     app:layout_constraintEnd_toStartOf="@+id/editPasswordBtn"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
@@ -155,9 +155,9 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:ems="10"
-                    android:inputType="datetime"
-                    android:text="@string/EditBirthDate"
+
+
+                    android:focusable="false"
                     app:layout_constraintEnd_toStartOf="@+id/editBirthDateBtn"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/editPassword" />
@@ -183,7 +183,7 @@
                     android:layout_marginEnd="16dp"
                     android:ems="10"
                     android:inputType="phone"
-                    android:text="@string/EditPhone"
+                    android:focusable="false"
                     app:layout_constraintEnd_toStartOf="@+id/editPhoneBtn"
                     app:layout_constraintStart_toEndOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/editBirthDate" />

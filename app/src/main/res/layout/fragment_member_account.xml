@@ -52,7 +52,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
-                    android:text="@string/gmail"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ic_avatar"
                     app:layout_constraintTop_toBottomOf="@+id/mobileNo" />
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
-                    android:text="@string/mobileNo"
+                    android:text="Guest"
                     app:layout_constraintStart_toEndOf="@+id/ic_avatar"
                     app:layout_constraintTop_toTopOf="parent" />
 
