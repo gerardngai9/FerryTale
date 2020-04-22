@@ -19,10 +19,9 @@ class PaymentFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<FragmentPaymentBinding>(
-            inflater,
-            R.layout.fragment_payment, container, false
-        )
+            inflater, R.layout.fragment_payment, container, false)
         return binding.root
+        }
     }
-}
+
 

@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_navigation_StaffAccount_to_navigation_profile"
             app:destination="@id/navigation_profile" />
+        <action
+            android:id="@+id/action_navigation_StaffAccount_to_navigation_view_all_user"
+            app:destination="@id/navigation_view_all_user" />
     </fragment>
 
     <fragment
@@ -44,7 +47,7 @@
         android:id="@+id/navigation_StaffviewAllUser"
         android:name="com.example.myapplication.ViewUserFragment"
         android:label="View all User"
-        tools:layout="@layout/fragment_view_user" >
+        tools:layout="@layout/fragment_all_user_card_view" >
         <action
             android:id="@+id/action_navigation_StaffviewAllUser_to_navigation_StaffAccount"
             app:destination="@id/navigation_StaffAccount" />
@@ -78,5 +81,12 @@
         <action
             android:id="@+id/action_navigation_profile_to_navigation_StaffAccount"
             app:destination="@id/navigation_StaffAccount" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_view_all_user"
+        android:name="com.example.myapplication.ViewUserFragment"
+        android:label="View User"
+        tools:layout="@layout/fragment_all_user_list_view" >
+
     </fragment>
 </navigation>
