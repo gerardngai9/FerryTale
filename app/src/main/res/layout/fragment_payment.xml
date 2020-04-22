@@ -98,7 +98,7 @@
             android:layout_marginEnd="16dp"
             android:ems="10"
             android:hint="@string/validDate"
-            android:inputType="number"
+            android:inputType="number|text"
             android:maxLength="5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.085"
@@ -145,6 +145,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PayAmount"
             app:srcCompat="@drawable/creditcard" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="Account Number"
+            android:inputType="number"
+            android:maxLength="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ValidDate" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
