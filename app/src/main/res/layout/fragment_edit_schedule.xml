@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -53,7 +54,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-
                 <Button
                     android:id="@+id/insertScheduleBtn"
                     android:layout_width="153dp"
@@ -69,14 +69,16 @@
                     app:layout_constraintStart_toEndOf="@+id/ferrysFound"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ListView
-                    android:id="@+id/display"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintBottom_toBottomOf="parent" />
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
+
+        <ListView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

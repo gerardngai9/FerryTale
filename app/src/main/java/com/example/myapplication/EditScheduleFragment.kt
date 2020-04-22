@@ -38,12 +38,14 @@ class EditScheduleFragment : Fragment(){
                 ).show()
             }
             override fun onDataChange(p0: DataSnapshot) {
+                var counter : Int = 0
                 if (p0!!.exists()) {
                     for (h in p0.children) {
                         val schedule = h.getValue(Schedule::class.java)
                         scheduleList1.add(schedule!!)
-
+                        counter++
                     }
+                    totalEntries.text = counter.toString()
                     val adapter = ScheduleAdapter1(
                         requireContext().applicationContext,
                         R.layout.display_schedule,
@@ -53,9 +55,9 @@ class EditScheduleFragment : Fragment(){
                 }
             }
         })
-//        binding.root.insertScheduleBtn.setOnClickListener {view: View ->
-//            view.findNavController().navigate(R.id.action_navigation_StaffeditSchedule_to_navigation_StaffInsertSchedule)
-//        }
+        binding.root.insertScheduleBtn.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_StaffeditSchedule_to_navigation_StaffInsertSchedule)
+        }
         return binding.root
     }
 }
