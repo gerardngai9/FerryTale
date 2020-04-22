@@ -91,11 +91,6 @@ class RegisterFragment : Fragment(){
             return
         }
 
-
-
-
-
-
         if (!Patterns.EMAIL_ADDRESS.matcher(email.text.toString()).matches()) {
             email.error = "Please enter valid email"
             email.requestFocus()
@@ -138,9 +133,6 @@ class RegisterFragment : Fragment(){
                                         Toast.makeText(activity, "Register save successfully", Toast.LENGTH_LONG).show()
 
                                     }
-
-
-
 
                                 view?.findNavController()?.navigate(R.id.action_navigation_register_to_navigation_login)
 //                                val intent = Intent(activity, LoginFragment::class.java)

@@ -3,7 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/user_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_register"
+        android:name="com.example.myapplication.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_navigation_register_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.myapplication.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_register"
+            app:destination="@id/navigation_register" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_home"
@@ -13,6 +33,13 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_schedule"
             app:destination="@id/navigation_schedule" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_location"
+            app:destination="@id/navigation_location" />
+        <argument
+            android:name="locations2"
+            app:argType="string"
+            android:defaultValue="Default" />
     </fragment>
 
     <fragment
@@ -124,10 +151,10 @@
 
     <fragment
         android:id="@+id/navigation_editUserName"
+
         android:name="com.example.myapplication.EditNameFragment"
         android:label="Change Name"
         tools:layout="@layout/fragment_user_editname" >
-
         <action
             android:id="@+id/action_navigation_editUserName_to_navigation_profile"
             app:destination="@id/navigation_profile" />
@@ -152,6 +179,24 @@
         <action
             android:id="@+id/action_navigation_editPhone_to_navigation_profile"
             app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_location"
+        android:name="com.example.myapplication.LocationFragment"
+        android:label="Location"
+        tools:layout="@layout/fragment_location" >
+        <argument
+            android:name="locations"
+            app:argType="string"
+            android:defaultValue="Default" />
+        <action
+            android:id="@+id/action_navigation_location_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="fromTo"
+            app:argType="string"
+            android:defaultValue="Default" />
     </fragment>
 
 
