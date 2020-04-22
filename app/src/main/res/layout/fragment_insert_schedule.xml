@@ -31,7 +31,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/totalEntries"
+
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="@dimen/primary_font_size"
                     android:textStyle="bold"
@@ -46,7 +46,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="32dp"
-                    android:text="@string/ferrysFound"
+                    android:text="                                      "
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="@dimen/primary_font_size"
                     android:textStyle="bold"
