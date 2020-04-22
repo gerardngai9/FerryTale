@@ -45,7 +45,7 @@ class EditScheduleFragment : Fragment(){
                         scheduleList1.add(schedule!!)
                         counter++
                     }
-                    totalEntries.text = counter.toString()
+                    binding.totalEntries.text = counter.toString()
                     val adapter = ScheduleAdapter1(
                         requireContext().applicationContext,
                         R.layout.display_schedule,
