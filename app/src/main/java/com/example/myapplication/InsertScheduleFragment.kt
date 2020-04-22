@@ -84,7 +84,8 @@ class InsertScheduleFragment : Fragment() {
             insertScheduleDuration.text.toString(),
             editText4.text.toString().toDouble(),
             editText5.text.toString().toDouble(),
-            contactInfoEditText.text.toString()
+            contactInfoEditText.text.toString(),
+            100
         )
         ref.child(scheduleID.toString()).setValue(schedule1).addOnCompleteListener {
             Toast.makeText(activity, "Schedule save successfully", Toast.LENGTH_LONG).show()

@@ -7,8 +7,9 @@ class Schedule (
     val duration: String,
     val priceAdult: Double,
     val priceChild: Double,
-    val startTime: String
+    val startTime: String,
+    val seat: Int
 )
 {
-    constructor(): this( "","","", "", 0.0, 0.0,"" )
+    constructor(): this( "","","", "", 0.0, 0.0,"", 0 )
 }

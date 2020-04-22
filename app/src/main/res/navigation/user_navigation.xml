@@ -5,8 +5,6 @@
     android:id="@+id/user_navigation"
     app:startDestination="@+id/navigation_home">
 
-
-
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.myapplication.HomeFragment"
@@ -32,6 +30,10 @@
         <action
             android:id="@+id/action_navigation_schedule_to_navigation_booking"
             app:destination="@id/navigation_booking" />
+        <argument
+            android:name="locations3"
+            app:argType="string"
+            android:defaultValue="Default" />
     </fragment>
 
     <fragment
@@ -133,7 +135,6 @@
 
     <fragment
         android:id="@+id/navigation_editUserName"
-
         android:name="com.example.myapplication.EditNameFragment"
         android:label="Change Name"
         tools:layout="@layout/fragment_user_editname" >
@@ -180,6 +181,5 @@
             app:argType="string"
             android:defaultValue="Default" />
     </fragment>
-
 
 </navigation>
