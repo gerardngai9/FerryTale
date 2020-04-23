@@ -11,5 +11,5 @@ class Schedule (
     val seat: Int
 )
 {
-    constructor(): this( "","","", "", 0.0, 0.0,"", 0 )
+    constructor(): this( "","","", "", 0.00, 0.00,"", 0 )
 }

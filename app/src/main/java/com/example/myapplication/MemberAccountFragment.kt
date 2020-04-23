@@ -48,11 +48,17 @@ class MemberAccountFragment : Fragment() {
             })
 
         }
+        binding.root.myAccountCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_profile)
+        }
         binding.root.myBookingsCardView.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_myBookings)
         }
-        binding.root.myAccountCardView.setOnClickListener {view: View ->
-            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_profile)
+        binding.root.copassengerCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_copassenger)
+        }
+        binding.root.contactCardView.setOnClickListener {view: View ->
+            view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_contactUs)
         }
         binding.root.settingsCardView.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_member_account_to_navigation_preference)

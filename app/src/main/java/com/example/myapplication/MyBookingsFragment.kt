@@ -18,9 +18,11 @@ import com.example.myapplication.SectionsPagerAdapter
 import com.example.myapplication.databinding.FragmentMyBookingsBinding
 import kotlinx.android.synthetic.main.fragment_completed.view.*
 import androidx.navigation.findNavController
+import com.google.firebase.auth.FirebaseAuth
 
 
 class MyBookingsFragment : Fragment() {
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater,

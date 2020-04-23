@@ -121,20 +121,71 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:layout_marginBottom="16dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
                             android:hint="@string/mobileNoText"
+                            android:inputType="textPersonName"
                             android:textColor="#979797"
-                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/emailIDText" />
+
+                        <EditText
+                            android:id="@+id/seatsText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:ems="10"
+                            android:inputType="textPersonName"
+                            android:textColor="#979797"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnMinus"
+                            app:layout_constraintStart_toEndOf="@+id/btnPlus"
+                            app:layout_constraintTop_toBottomOf="@+id/noofSeatsText"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <Button
+                            android:id="@+id/btnPlus"
+                            style="@style/PrimaryBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="+"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/noofSeatsText" />
+
+                        <Button
+                            android:id="@+id/btnMinus"
+                            style="@style/PrimaryBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="-"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/noofSeatsText" />
+
+                        <TextView
+                            android:id="@+id/noofSeatsText"
+                            style="@style/PrimaryText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:text="No. of Seats"
+                            app:layout_constraintBottom_toTopOf="@+id/seatsText"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/mobileNoText" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -162,14 +213,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
                             android:hint="@string/ageText"
+                            android:inputType="number"
                             android:textColor="#979797"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -249,22 +298,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
-
-                        <TextView
-                            android:id="@+id/coPassengerText2"
-                            style="@style/SecondaryText"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:text="@string/coPassengerText"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
                         <TextView
                             android:id="@+id/coPassengerText"
                             style="@style/SecondaryText"
@@ -302,14 +335,12 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
-                            android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
                             android:layout_marginBottom="16dp"
                             android:ems="10"
-                            android:inputType="textPersonName"
                             android:hint="@string/ageText"
+                            android:inputType="number"
                             android:textColor="#979797"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"

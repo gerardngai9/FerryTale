@@ -10,16 +10,14 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.navArgs
-import com.example.myapplication.databinding.FragmentTicketDetailsBinding
+import com.example.myapplication.databinding.FragmentCopassengerBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.fragment_ticket_details.view.*
+import kotlinx.android.synthetic.main.fragment_completed.view.*
 
+class CopassengerFragment : Fragment() {
 
-class TicketDetailsFragment : Fragment() {
-
-    lateinit var BookingList: MutableList<Booking>
+    lateinit var CopassengerList: MutableList<Passenger>
     lateinit var ref: DatabaseReference
     lateinit var listView: ListView
 
@@ -30,30 +28,27 @@ class TicketDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         auth = FirebaseAuth.getInstance()
-        val binding = DataBindingUtil.inflate<FragmentTicketDetailsBinding>(
-            inflater,
-            R.layout.fragment_ticket_details, container, false
-        )
-        binding.root.cancelTicketBtn.setOnClickListener { view: View ->
-            view.findNavController()
-                .navigate(R.id.action_navigation_ticketDetails_to_navigation_cancel)
-        }
+        val binding = DataBindingUtil.inflate<FragmentCopassengerBinding>(inflater,
+            R.layout.fragment_copassenger,container,false)
 
-        listView = binding.ticketDetailsLV
-        bookingDetail(listView)
+        listView = binding.copassengerLV
+        copassengerDetail(listView)
 
         return binding.root
     }
 
-    private fun bookingDetail(listView: ListView) {
-        BookingList = mutableListOf()
-        ref = FirebaseDatabase.getInstance().getReference("Booking")
+    private fun copassengerDetail(listView: ListView){
+        CopassengerList = mutableListOf()
+        ref = FirebaseDatabase.getInstance().getReference("Passenger")
 
-        val args: TicketDetailsFragmentArgs by navArgs()
-        var bookingID: String = args.bookingID
+        var user = auth.currentUser
+        var uid = user!!.uid
 
-        val user = auth.currentUser
-        val uid = user!!.uid
+        listView.setOnItemClickListener{ parent, view, position, id ->
+            //bookingID = CopassengerList[position].bookingID
+            //val action = MyBookingsFragmentDirections.actionNavigationMyBookingsToNavigationTicketDetails("$bookingID")
+            //Navigation.findNavController(view).navigate(action)
+        }
 
         ref.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
@@ -63,23 +58,26 @@ class TicketDetailsFragment : Fragment() {
                 ).show()
             }
             override fun onDataChange(p0: DataSnapshot) {
+                var counter: Int = 0
                 if (p0!!.exists()) {
                     for (h in p0.children) {
-                        val booking = h.getValue(Booking::class.java)
-                        if(booking!!.bookingID.equals(bookingID.toString())){
-                            BookingList.add(booking!!)
+
+                        val passenger = h.getValue(Passenger::class.java)
+                        if(passenger!!.uid.equals(uid.toString())){
+                            CopassengerList.add(passenger!!)
+                            counter++
                         }
                     }
 
-                    val adapter = BookingAdapter2(
+                    val adapter = CopassengerAdapter(
                         requireContext().applicationContext,
-                        R.layout.ticket_details_item_list,
-                        BookingList
+                        R.layout.copassenger_item_list,
+                        CopassengerList
                     )
                     listView.adapter = adapter
                 }
             }
         })
     }
-}
 
+}

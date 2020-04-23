@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -18,6 +19,11 @@ import kotlinx.android.synthetic.main.fragment_home.view.toTextField
 
 class HomeFragment : Fragment() {
 
+    companion object {
+        var editText: String = ""
+        var editText1: String = ""
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,19 +34,28 @@ class HomeFragment : Fragment() {
             R.layout.fragment_home, container, false
         )
 
+        binding.root.fromTextField.setHint(editText)
+        binding.root.toTextField.setHint(editText1)
+
         binding.root.searchBtn.setOnClickListener {view: View ->
             view.findNavController().navigate(R.id.action_navigation_home_to_navigation_schedule)
         }
         binding.root.fromTextField.setOnClickListener {view: View ->
-            val fromText: TextView = binding.root.findViewById(R.id.fromText)
+            val fromText: TextView = binding.fromText
             val from= fromText.text.toString()
             val action = HomeFragmentDirections.actionNavigationHomeToNavigationLocation("$from")
             Navigation.findNavController(view).navigate(action)
         }
         binding.root.toTextField.setOnClickListener {view: View ->
-            val toText: TextView = binding.root.findViewById(R.id.toText)
+            val toText: TextView = binding.toText
             val to = toText.text.toString()
             val action = HomeFragmentDirections.actionNavigationHomeToNavigationLocation("$to")
+            Navigation.findNavController(view).navigate(action)
+        }
+        binding.root.searchBtn.setOnClickListener {view: View ->
+            val origin= editText.toString()
+            val dest= editText1.toString()
+            val action = HomeFragmentDirections.actionNavigationHomeToNavigationSchedule("$origin|$dest")
             Navigation.findNavController(view).navigate(action)
         }
 
@@ -49,10 +64,12 @@ class HomeFragment : Fragment() {
 
         if(fromTo != "Default"){
             if(fromTo.split("|")[1].equals("From")) {
-                binding.root.fromTextField.setText(fromTo.split("|")[0])
+                editText = fromTo.split("|")[0]
+                binding.root.fromTextField.setHint(fromTo.split("|")[0])
             }
             else if(fromTo.split("|")[1].equals("To")){
-                binding.root.toTextField.setText(fromTo.split("|")[0])
+                editText1 = fromTo.split("|")[0]
+                binding.root.toTextField.setHint(fromTo.split("|")[0])
             }
 
         }

@@ -4,10 +4,10 @@ class Passenger (
     val uid: String,
     val emailID: String,
     val phoneNum: String,
-    val PrimName: String,
-    val PrimAge: String,
-    val CoName: String,
-    val CoAge: String
+    val primName: String,
+    val primAge: String,
+    val coName: String,
+    val coAge: String
 )
 {
     constructor(): this("","","", "", "", "","")

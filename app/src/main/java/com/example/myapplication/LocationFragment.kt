@@ -57,6 +57,35 @@ class LocationFragment : Fragment() {
 
         }
 
+        scheduleList = mutableListOf()
+        ref = FirebaseDatabase.getInstance().getReference("Schedule")
+        listView = binding.locationLV
+
+        ref.addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(p0: DatabaseError) {
+                Toast.makeText(
+                    activity, "Database Error.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+            override fun onDataChange(p0: DataSnapshot) {
+
+                if (p0!!.exists()) {
+                    for (h in p0.children) {
+                        val schedule = h.getValue(Schedule::class.java)
+                            scheduleList.add(schedule!!)
+                    }
+                }
+                val adapter = ScheduleAdapter(
+                    requireContext().applicationContext,
+                    R.layout.location_item_list,
+                    scheduleList, originDest
+                )
+                listView.adapter = adapter
+            }
+        })
+
         return binding.root
     }
 
@@ -94,9 +123,9 @@ class LocationFragment : Fragment() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if(newText!!.isNotEmpty()){
+                if(newText!!.isNotEmpty()) {
                     scheduleList.clear()
-                    i = 0
+
                     ref.addValueEventListener(object : ValueEventListener {
                         override fun onCancelled(p0: DatabaseError) {
                             Toast.makeText(
@@ -104,25 +133,27 @@ class LocationFragment : Fragment() {
                                 Toast.LENGTH_SHORT
                             ).show()
                         }
+
                         override fun onDataChange(p0: DataSnapshot) {
                             val search = newText.toLowerCase()
 
                             if (p0!!.exists()) {
                                 for (h in p0.children) {
-
                                     val schedule = h.getValue(Schedule::class.java)
-                                    if (schedule?.origin.toString().toLowerCase().contains(search)) {
+                                    if (schedule?.origin.toString().toLowerCase()
+                                            .contains(search)
+                                    ) {
                                         scheduleList.add(schedule!!)
-                                        i++
                                     }
+                                    i++
                                 }
-                                val adapter = ScheduleAdapter(
-                                    requireContext().applicationContext,
-                                    R.layout.location_item_list,
-                                    scheduleList, originDest
-                                )
-                                    listView.adapter = adapter
                             }
+                            val adapter = ScheduleAdapter(
+                                requireContext().applicationContext,
+                                R.layout.location_item_list,
+                                scheduleList, originDest
+                            )
+                            listView.adapter = adapter
                         }
                     })
                 } else {
@@ -153,7 +184,7 @@ class LocationFragment : Fragment() {
                         }
                     })
                 }
-
+                if(newText.isNotEmpty() && !newText.isNullOrBlank())
                 Toast.makeText(context, "Looking for $newText", Toast.LENGTH_LONG).show()
                 return false
             }

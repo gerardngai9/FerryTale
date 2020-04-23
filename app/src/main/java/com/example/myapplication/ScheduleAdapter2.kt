@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 
-class ScheduleAdapter2(val mCtx: Context, val layoutResId: Int, val scheduleList: List<Schedule>)
-    : ArrayAdapter<Schedule>(mCtx, layoutResId, scheduleList){
+class ScheduleAdapter2(val mCtx: Context, val layoutResId: Int, val ScheduleList: List<Schedule>)
+    : ArrayAdapter<Schedule>(mCtx, layoutResId, ScheduleList){
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val layoutInflater: LayoutInflater = LayoutInflater.from(mCtx)
         val view: View = layoutInflater.inflate(layoutResId, null)
-
 
         val timeText: TextView = view.findViewById(R.id.timeText)
         val adPrice: TextView = view.findViewById(R.id.adPrice)
@@ -23,7 +22,7 @@ class ScheduleAdapter2(val mCtx: Context, val layoutResId: Int, val scheduleList
         val sourceText: TextView = view.findViewById(R.id.sourceText)
         val destText: TextView = view.findViewById(R.id.destText)
 
-        val schedule = scheduleList[position]
+        val schedule = ScheduleList[position]
 
         timeText.text = schedule.startTime
         adPrice.text = schedule.priceAdult.toString()

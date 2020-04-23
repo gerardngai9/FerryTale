@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -13,15 +13,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:clickable="true"
-            android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ferrysFound">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cardViewConstraint"
@@ -33,14 +29,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
                     android:layout_marginTop="16dp"
                     android:text="@string/dpTime"
                     android:textColor="@color/secondaryTextColor"
                     android:textSize="@dimen/primary_font_size"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/opImage" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/rm2"
@@ -126,47 +121,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hrDuration" />
 
-                <TextView
-                    android:id="@+id/min"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/min"
-                    android:textColor="#555555"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toEndOf="@+id/minDuration"
-                    app:layout_constraintTop_toBottomOf="@+id/timeText" />
-
-                <TextView
-                    android:id="@+id/minDuration"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/minDuration"
-                    android:textColor="#555555"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toEndOf="@+id/h"
-                    app:layout_constraintTop_toBottomOf="@+id/timeText" />
-
-                <TextView
-                    android:id="@+id/h"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/h"
-                    android:textColor="#555555"
-                    android:textSize="12sp"
-                    android:textStyle="normal"
-                    app:layout_constraintStart_toEndOf="@+id/hrDuration"
-                    app:layout_constraintTop_toBottomOf="@+id/timeText" />
 
                 <TextView
                     android:id="@+id/hrDuration"
@@ -214,8 +168,7 @@
                     android:id="@+id/toText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="8dp"
                     android:text="@string/to"
                     android:textColor="@color/secondaryTextColor"
@@ -244,17 +197,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/rm2"
                     app:srcCompat="@drawable/ic_child" />
-
-                <ImageView
-                    android:id="@+id/opImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="60dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/calendar" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

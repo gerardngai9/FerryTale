@@ -25,7 +25,6 @@ class PaymentFragment : Fragment() {
     var auth =  FirebaseAuth.getInstance()
     private lateinit var ref: DatabaseReference
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -36,9 +35,7 @@ class PaymentFragment : Fragment() {
 
         binding.root.Purchase.setOnClickListener {
             payment()
-            //view.findNavController().navigate(R.id.action_navigation_login_to_navigation_home)
         }
-        ref = FirebaseDatabase.getInstance().getReference( "Bank")
 
         return binding.root
     }
@@ -63,58 +60,42 @@ class PaymentFragment : Fragment() {
             return
         }
 
-        var id ="1"
-
-
-
-        ref.child("1").addListenerForSingleValueEvent(object :ValueEventListener {
+        //var id ="1"
+        //ref.child("1").addListenerForSingleValueEvent(object :ValueEventListener
+        ref = FirebaseDatabase.getInstance().getReference( "Bank")
+        ref.addValueEventListener(object :ValueEventListener {
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                Toast.makeText(
+                    activity, "Database Error.",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
             override fun onDataChange(p0: DataSnapshot) {
+                var counter: Int = 0
+                if (p0!!.exists()) {
+                    for (h in p0.children) {
 
-                val dataCVV= p0.getValue(Bank::class.java)!!.CVV
-                val dataAccNum = p0.getValue(Bank::class.java)!!.accNo
-                val dataValidDate = p0.getValue(Bank::class.java)!!.validDate
-
-
-                if(CVV.text.toString()==dataCVV.toString())
-                {
-                    if(ValidDate.text.toString().equals(dataValidDate.toString()))
-                    {
-                        if(editText.text.toString().equals(dataAccNum.toString()))
-                        {
-                            Toast.makeText(activity, "Payment Successful", Toast.LENGTH_SHORT).show()
-                            //view?.findNavController()?.navigate(R.id.action_navigation_login_to_navigation_home)
-                        }else
-                        {
-                            Toast.makeText(activity, "CVV, ValidDate or Accound Number Wrong!", Toast.LENGTH_LONG).show()
+                        val bank = h.getValue(Bank::class.java)
+                        if(bank!!.CVV.equals(CVV.text.toString())){
+                            if(bank!!.accNo.equals(editText.text.toString())){
+                                if(bank!!.validDate.equals(ValidDate.text.toString())){
+                                    Toast.makeText(activity, "Payment Successful", Toast.LENGTH_SHORT).show()
+                                    view?.findNavController()?.navigate(R.id.action_navigation_payment_to_navigation_home)
+                                } else {
+                                    Toast.makeText(activity, "CVV, ValidDate or Account Number Wrong!", Toast.LENGTH_LONG).show()
+                                }
+                            } else {
+                                Toast.makeText(activity, "Account Number & CVV is not valid!", Toast.LENGTH_SHORT).show()
+                            }
+                        } else {
+                            Toast.makeText(activity, "CVV is not valid!", Toast.LENGTH_LONG).show()
                         }
-                    }else
-                    {
-                        Toast.makeText(activity, "CVV, ValidDate or Accound Number Wrong!", Toast.LENGTH_LONG).show()
                     }
-                }else
-                {
-                    Toast.makeText(activity, "CVV, ValidDate or Accound Number Wrong!", Toast.LENGTH_LONG).show()
                 }
-
-
-
-
-
-
-
             }
-
         })
-
-
-
     }
-
-
 }
 
 
